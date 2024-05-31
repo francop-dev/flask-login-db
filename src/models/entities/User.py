@@ -1,9 +1,13 @@
 from werkzeug.security import check_password_hash, generate_password_hash
-# entities/User.py
-
+from flask_login import UserMixin
 import bcrypt
 
-class User:
+# entities/User.py
+
+
+
+
+class User(UserMixin):
     def __init__(self, id, mail, password, fullname="") -> None:
         self.id = id
         self.mail = mail
